@@ -11,24 +11,27 @@ import XCTest
 
 class PGRTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testAPIHitSuccessful() throws {
+        let mocaDataCount = 100
+        let expectatin = XCTestExpectation(description: "Request repos from Github")
+        let url = URL(string: "\(Bundle.main.baseURL)")
+        let task = URLSession.shared.dataTask(with: url!){(data, response, _) in
+            if let responseHTTP = response as? HTTPURLResponse{
+                XCTAssertEqual(responseHTTP.statusCode, 200)
+                if let data = data {
+                    do {
+                        let model = try JSONDecoder().decode([ReposModel].self, from: data)
+                        XCTAssertEqual(model.count, mocaDataCount)
+                    }
+                    catch {
+                        print(error)
+                    }
+                }
+                expectatin.fulfill()
+            }
         }
+        task.resume()
+        wait(for: [expectatin], timeout: 10.0)/// to wait while response back if test failed please increace time in seconds.
     }
 
 }

@@ -14,7 +14,6 @@
 		0415DF8C257022B2009BCD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0415DF8B257022B2009BCD32 /* Assets.xcassets */; };
 		0415DF8F257022B2009BCD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0415DF8D257022B2009BCD32 /* LaunchScreen.storyboard */; };
 		0415DF9A257022B2009BCD32 /* PGRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415DF99257022B2009BCD32 /* PGRTests.swift */; };
-		0415DFA5257022B2009BCD32 /* PGRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415DFA4257022B2009BCD32 /* PGRUITests.swift */; };
 		0427FD3325713604006E92C9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427FD3225713604006E92C9 /* BaseViewController.swift */; };
 		0427FD3525713612006E92C9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427FD3425713612006E92C9 /* BaseViewModel.swift */; };
 		04D116D62570262D00494C24 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D116D42570262D00494C24 /* Extensions.swift */; };
@@ -65,8 +64,6 @@
 		0415DF99257022B2009BCD32 /* PGRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGRTests.swift; sourceTree = "<group>"; };
 		0415DF9B257022B2009BCD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0415DFA0257022B2009BCD32 /* PGRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0415DFA4257022B2009BCD32 /* PGRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGRUITests.swift; sourceTree = "<group>"; };
-		0415DFA6257022B2009BCD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0427FD3225713604006E92C9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0427FD3425713612006E92C9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		04D116D42570262D00494C24 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -126,7 +123,6 @@
 			children = (
 				0415DF7E257022B0009BCD32 /* PGR */,
 				0415DF98257022B2009BCD32 /* PGRTests */,
-				0415DFA3257022B2009BCD32 /* PGRUITests */,
 				0415DF7D257022B0009BCD32 /* Products */,
 				98A9E10B3E627806DD57672F /* Pods */,
 				9D55492782F9541E9F69006C /* Frameworks */,
@@ -167,15 +163,6 @@
 				0415DF9B257022B2009BCD32 /* Info.plist */,
 			);
 			path = PGRTests;
-			sourceTree = "<group>";
-		};
-		0415DFA3257022B2009BCD32 /* PGRUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0415DFA4257022B2009BCD32 /* PGRUITests.swift */,
-				0415DFA6257022B2009BCD32 /* Info.plist */,
-			);
-			path = PGRUITests;
 			sourceTree = "<group>";
 		};
 		0427FD31257135EB006E92C9 /* Base */ = {
@@ -605,7 +592,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0415DFA5257022B2009BCD32 /* PGRUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
